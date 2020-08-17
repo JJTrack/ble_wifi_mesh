@@ -1,8 +1,8 @@
-# Install script for directory: C:/esp/esp-idf/components/jsmn
+# Install script for directory: /Users/jono/esp/esp-idf/components/jsmn
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/internal_communication")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/Users/Jonathan/Desktop/internal_communication/build/CMakeFiles/bootloader
-C:/Users/Jonathan/Desktop/internal_communication/build/CMakeFiles/bootloader.rule
-C:/Users/Jonathan/Desktop/internal_communication/build/CMakeFiles/bootloader-complete.rule
-C:/Users/Jonathan/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/Users/Jonathan/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/Users/Jonathan/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/Users/Jonathan/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
-C:/Users/Jonathan/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/Users/Jonathan/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/Users/Jonathan/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/jono/Desktop/internal_communication/build/CMakeFiles/bootloader
+/Users/jono/Desktop/internal_communication/build/CMakeFiles/bootloader.rule
+/Users/jono/Desktop/internal_communication/build/CMakeFiles/bootloader-complete.rule
+/Users/jono/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jono/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jono/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jono/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/jono/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jono/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jono/Desktop/internal_communication/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
