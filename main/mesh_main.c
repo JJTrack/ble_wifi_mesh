@@ -82,22 +82,15 @@ void app_main(void)
 
 
 
-    while (1) {
-        vTaskDelay(10 * 1000 / portTICK_RATE_MS);
-        esp_wifi_stop();
-        vTaskDelay(10 * 1000 / portTICK_RATE_MS);
-        esp_nimble_hci_and_controller_init();
-        nimble_port_init();
+    /* bluetooth init */
+    esp_nimble_hci_and_controller_init();
+    nimble_port_init();
 
-        ble_svc_gap_device_name_set(DEVICE_NAME);
-        ble_svc_gap_init();
+    ble_svc_gap_device_name_set(DEVICE_NAME);
+    ble_svc_gap_init();
 
-        ble_hs_cfg.sync_cb = ble_app_on_sync;
-        nimble_port_freertos_init(host_task);
+    ble_hs_cfg.sync_cb = ble_app_on_sync;
+    nimble_port_freertos_init(host_task);
 
-        vTaskDelay(10 * 1000 / portTICK_RATE_MS);
-
-        esp_wifi_restore();
-    }
 
 }

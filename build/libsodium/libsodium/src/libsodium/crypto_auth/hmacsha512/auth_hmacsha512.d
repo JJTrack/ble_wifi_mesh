@@ -1,0 +1,24 @@
+libsodium/src/libsodium/crypto_auth/hmacsha512/auth_hmacsha512.o: \
+ /Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha512/auth_hmacsha512.c \
+ /Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_auth_hmacsha512.h \
+ /Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h \
+ /Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ /Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h \
+ /Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_64.h \
+ /Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
+ /Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h
+
+/Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_auth_hmacsha512.h:
+
+/Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h:
+
+/Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+
+/Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_hash_sha512.h:
+
+/Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_64.h:
+
+/Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h:
+
+/Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/Users/jono/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha512/auth_hmacsha512.c:
