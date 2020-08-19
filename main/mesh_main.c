@@ -11,28 +11,6 @@
 #include "wifi_mesh_example.h"
 #include "ble_example.h"
 
-
-/*******************************************************
- *                Macros
- *******************************************************/
-
- /*******************************************************
-  *                Constants
-  *******************************************************/
-
-
-
-
-  /*******************************************************
-   *                Variable Definitions
-   *******************************************************/
-
-
-   /*******************************************************
-    *                Function Definitions
-    *******************************************************/
-
-
 void app_main(void)
 {
     ESP_ERROR_CHECK(nvs_flash_init());
@@ -57,7 +35,7 @@ void app_main(void)
     ESP_ERROR_CHECK(esp_event_handler_register(MESH_EVENT, ESP_EVENT_ANY_ID, &mesh_event_handler, NULL));
     ESP_ERROR_CHECK(esp_mesh_set_max_layer(CONFIG_MESH_MAX_LAYER));
     ESP_ERROR_CHECK(esp_mesh_set_vote_percentage(1));
-    ESP_ERROR_CHECK(esp_mesh_set_ap_assoc_expire(10));
+    ESP_ERROR_CHECK(esp_mesh_set_ap_assoc_expire(30));
     mesh_cfg_t cfg = MESH_INIT_CONFIG_DEFAULT();
     /* mesh ID */
     memcpy((uint8_t *)&cfg.mesh_id, MESH_ID, 6);
@@ -67,6 +45,7 @@ void app_main(void)
     memcpy((uint8_t *)&cfg.router.ssid, CONFIG_MESH_ROUTER_SSID, cfg.router.ssid_len);
     memcpy((uint8_t *)&cfg.router.password, CONFIG_MESH_ROUTER_PASSWD,
         strlen(CONFIG_MESH_ROUTER_PASSWD));
+
     /* mesh softAP */
     ESP_ERROR_CHECK(esp_mesh_set_ap_authmode(CONFIG_MESH_AP_AUTHMODE));
     cfg.mesh_ap.max_connection = CONFIG_MESH_AP_CONNECTIONS;
@@ -79,7 +58,6 @@ void app_main(void)
     ESP_ERROR_CHECK(esp_mesh_start());
     ESP_LOGI(MESH_TAG, "mesh starts successfully, heap:%d, %s\n", esp_get_free_heap_size(),
         esp_mesh_is_root_fixed() ? "root fixed" : "root not fixed");
-
 
 
     /* bluetooth init */

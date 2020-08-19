@@ -18,20 +18,13 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg)
     {
     case BLE_GAP_EVENT_DISC:
         ble_hs_adv_parse_fields(&fields, event->disc.data, event->disc.length_data);
-        printf("discovered device %.*s\n", fields.name_len, fields.name);
-        if (fields.name_len == strlen(DEVICE_NAME) && memcmp(fields.name, DEVICE_NAME, strlen(DEVICE_NAME)) == 0)
-        {
-            printf("device found\n");
-            ble_gap_disc_cancel();
-            ble_gap_connect(BLE_OWN_ADDR_PUBLIC, &event->disc.addr, 1000, NULL, ble_gap_event, NULL);
-        }
+        printf("discovered device %.*s\n", fields.svc_data_uuid16_len, fields.svc_data_uuid16);
+        ESP_LOGI("RSSI", "This is an rssi value: %d", event->disc.rssi );
+        
+        // ble_gap_disc_cancel();
         break;
     case BLE_GAP_EVENT_CONNECT:
         ESP_LOGI("GAP", "BLE_GAP_EVENT_CONNECT %s", event->connect.status == 0 ? "OK" : "Failed");
-        if (event->connect.status == 0)
-        {
-
-        }
         break;
     case BLE_GAP_EVENT_DISCONNECT:
         ESP_LOGI("GAP", "BLE_GAP_EVENT_DISCONNECT");

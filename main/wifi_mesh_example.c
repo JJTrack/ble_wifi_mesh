@@ -83,6 +83,7 @@ void esp_mesh_p2p_rx_main(void *arg)
             ESP_LOGW("BRUH", "child nodes -> %.*s", data.size, data.data);
         }
     }
+    
     vTaskDelete(NULL);
 }
 
@@ -91,8 +92,10 @@ esp_err_t esp_mesh_comm_p2p_start(void)
     static bool is_comm_p2p_started = false;
     if (!is_comm_p2p_started) {
         is_comm_p2p_started = true;
+
         xTaskCreate(esp_mesh_p2p_tx_main, "MPTX", 3072, NULL, 5, NULL);
         xTaskCreate(esp_mesh_p2p_rx_main, "MPRX", 3072, NULL, 5, NULL);
+        
     }
     return ESP_OK;
 }
