@@ -14,7 +14,7 @@
 
 void app_main(void)
 {
-    ble_uuid_queue = xQueueCreate(3, sizeof(ble_data_for_queue_t));
+    ble_data_queue = xQueueCreate(3, sizeof(ble_data_for_queue_t));
     
 
     ESP_ERROR_CHECK(nvs_flash_init());

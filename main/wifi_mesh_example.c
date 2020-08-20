@@ -10,14 +10,13 @@
 
 void esp_mesh_p2p_tx_main(void *arg)
 {
-    extern xQueueHandle ble_uuid_queue;
-    int i;
+    extern xQueueHandle ble_data_queue;
+    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 32}; 
+    uint8_t PacketID[8] = {5, 2, 12, 4, 5, 6, 42, 88};
+    uint8_t dataPacket[21];
     esp_err_t err;
     int send_count = 0;
-    mesh_addr_t route_table[CONFIG_MESH_ROUTE_TABLE_SIZE];
-    int route_table_size = 0;
     mesh_data_t data;
-    data.data = NODE_ID;
     data.size = sizeof(MESH_ID);
     data.proto = MESH_PROTO_BIN;
     data.tos = MESH_TOS_P2P;
@@ -38,22 +37,47 @@ void esp_mesh_p2p_tx_main(void *arg)
 
         ble_data_for_queue_t tx_uuid;
 
-        if(xQueueReceive(ble_uuid_queue, &tx_uuid, 1000 / portTICK_PERIOD_MS)) {
+        if(xQueueReceive(ble_data_queue, &tx_uuid, 1000 / portTICK_PERIOD_MS)) {
             ESP_LOGE("QUEUE", "This is the tx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
             tx_uuid.uuid[5] & 0xff, tx_uuid.uuid[4] & 0xff, tx_uuid.uuid[3] & 0xff,
             tx_uuid.uuid[2] & 0xff, tx_uuid.uuid[1] & 0xff, tx_uuid.uuid[0] & 0xff);
 
             ESP_LOGE("QUEUE", "This is the tx_rssi: %d", tx_uuid.rssi);
+
+            for (int i = 0; i<21; i++) 
+            {
+                if (i < 1) {
+                    dataPacket[i] = (uint8_t) (tx_uuid.rssi*-1);
+                }
+                else if (i < 7) {
+                    dataPacket[i] = tx_uuid.uuid[i-1];
+                }
+                else if (i < 13) {
+                    dataPacket[i] = NodeUUID[i-7];
+                }
+                else if (i < 21) {
+                    dataPacket[i] = PacketID[i-13];
+                }
+            }
+
+            data.data = dataPacket;
+
+            send_count++;
+            tx_buf[25] = (send_count >> 24) & 0xff;
+            tx_buf[24] = (send_count >> 16) & 0xff;
+            tx_buf[23] = (send_count >> 8) & 0xff;
+            tx_buf[22] = (send_count >> 0) & 0xff;
+
+            err = esp_mesh_send(NULL, &data, 0, NULL, 0);
+
+            if(err) {
+                ESP_LOGE("SENDING ERROR", "CANNOT SEND DATA PACKET");
+            } else {
+                ESP_LOGE("SENDING SUCCESS", "DATA PACKET SENT");
+            }
         }
 
 
-        send_count++;
-        tx_buf[25] = (send_count >> 24) & 0xff;
-        tx_buf[24] = (send_count >> 16) & 0xff;
-        tx_buf[23] = (send_count >> 8) & 0xff;
-        tx_buf[22] = (send_count >> 0) & 0xff;
-
-        err = esp_mesh_send(NULL, &data, 0, NULL, 0);
     }
     vTaskDelete(NULL);
 }
@@ -93,6 +117,10 @@ void esp_mesh_p2p_rx_main(void *arg)
                 data.size, esp_get_free_heap_size(), flag, err, data.proto,
                 data.tos);
         }
+
+        ESP_LOGE("RECEIVE", "This is the rx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
+        data.data[6] & 0xff, data.data[5] & 0xff, data.data[4] & 0xff,
+        data.data[3] & 0xff, data.data[2] & 0xff, data.data[1] & 0xff);
     }
     
     vTaskDelete(NULL);

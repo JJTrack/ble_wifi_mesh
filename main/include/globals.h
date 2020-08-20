@@ -12,7 +12,7 @@ typedef struct
 } ble_data_for_queue_t;
 
 
-xQueueHandle ble_uuid_queue;
-xQueueHandle ble_rssi_queue;
+xQueueHandle ble_data_queue;
+
 
 #endif /* __GLOBALS_H__ */

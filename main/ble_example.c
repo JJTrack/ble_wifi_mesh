@@ -15,7 +15,7 @@ void add_val_to_queue(void * params)
     long ok;
 
     ble_data_for_queue_t stuff = *(ble_data_for_queue_t *) params;
-    ok = xQueueSend(ble_uuid_queue, &stuff, 1000 / portTICK_PERIOD_MS);
+    ok = xQueueSend(ble_data_queue, &stuff, 1000 / portTICK_PERIOD_MS);
 
     if(ok) {
         ESP_LOGI("QUEUE", "ADDED UUID");
