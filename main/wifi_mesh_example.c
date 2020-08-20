@@ -6,9 +6,11 @@
 #include "esp_log.h"
 #include "esp_mesh.h"
 #include "esp_mesh_internal.h"
+#include "globals.h"
 
 void esp_mesh_p2p_tx_main(void *arg)
 {
+    extern xQueueHandle ble_uuid_queue;
     int i;
     esp_err_t err;
     int send_count = 0;
@@ -33,6 +35,17 @@ void esp_mesh_p2p_tx_main(void *arg)
             vTaskDelay(10 * 1000 / portTICK_RATE_MS);
             continue;
         }
+
+        ble_data_for_queue_t tx_uuid;
+
+        if(xQueueReceive(ble_uuid_queue, &tx_uuid, 1000 / portTICK_PERIOD_MS)) {
+            ESP_LOGE("QUEUE", "This is the tx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
+            tx_uuid.uuid[5] & 0xff, tx_uuid.uuid[4] & 0xff, tx_uuid.uuid[3] & 0xff,
+            tx_uuid.uuid[2] & 0xff, tx_uuid.uuid[1] & 0xff, tx_uuid.uuid[0] & 0xff);
+
+            ESP_LOGE("QUEUE", "This is the tx_rssi: %d", tx_uuid.rssi);
+        }
+
 
         send_count++;
         tx_buf[25] = (send_count >> 24) & 0xff;
@@ -79,8 +92,6 @@ void esp_mesh_p2p_rx_main(void *arg)
                 MAC2STR(mesh_parent_addr.addr), MAC2STR(from.addr),
                 data.size, esp_get_free_heap_size(), flag, err, data.proto,
                 data.tos);
-
-            ESP_LOGW("BRUH", "child nodes -> %.*s", data.size, data.data);
         }
     }
     

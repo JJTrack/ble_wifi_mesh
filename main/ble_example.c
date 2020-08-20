@@ -4,11 +4,27 @@
 #include "nimble/nimble_port_freertos.h"
 #include "host/ble_hs.h"
 #include "services/gap/ble_svc_gap.h"
+#include "globals.h"
 
 /*******************************************************
  *                Function Definitions
  *******************************************************/
 
+void add_val_to_queue(void * params) 
+{
+    long ok;
+
+    ble_data_for_queue_t stuff = *(ble_data_for_queue_t *) params;
+    ok = xQueueSend(ble_uuid_queue, &stuff, 1000 / portTICK_PERIOD_MS);
+
+    if(ok) {
+        ESP_LOGI("QUEUE", "ADDED UUID");
+    } else {
+        ESP_LOGI("QUEUE", "FAILED TO ADD UUID");
+    }
+
+    vTaskDelete(NULL);
+}
 
 static int ble_gap_event(struct ble_gap_event *event, void *arg)
 {
@@ -18,8 +34,18 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg)
     {
     case BLE_GAP_EVENT_DISC:
         ble_hs_adv_parse_fields(&fields, event->disc.data, event->disc.length_data);
-        printf("discovered device %.*s\n", fields.svc_data_uuid16_len, fields.svc_data_uuid16);
-        ESP_LOGI("RSSI", "This is an rssi value: %d", event->disc.rssi );
+        if (fields.name_len == strlen(DEVICE_NAME) && memcmp(fields.name, DEVICE_NAME, strlen(DEVICE_NAME)) == 0){
+            ble_data_for_queue_t stuff;
+            stuff.rssi = event->disc.rssi;
+            memcpy(stuff.uuid, event->disc.addr.val, 6);
+            xTaskCreate(&add_val_to_queue, "add_to_queue", 2048, &stuff, 2, NULL);
+
+            ESP_LOGI("NAME", "This is the name: %.*s", fields.name_len, fields.name);
+            ESP_LOGI("UUID", "This is the uuid: %02x:%02x:%02x:%02x:%02x:%02x",
+            event->disc.addr.val[5] & 0xff, event->disc.addr.val[4] & 0xff, event->disc.addr.val[3] & 0xff,
+            event->disc.addr.val[2] & 0xff, event->disc.addr.val[1] & 0xff, event->disc.addr.val[0] & 0xff);
+            ESP_LOGI("RSSI", "This is an rssi value: %d\n", event->disc.rssi );
+        }
         
         // ble_gap_disc_cancel();
         break;
@@ -40,6 +66,7 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg)
     }
     return 0;
 }
+
 
 void ble_app_scan(void)
 {

@@ -8,7 +8,7 @@
 #include "host/ble_hs.h"
 #include "services/gap/ble_svc_gap.h"
 
-#define DEVICE_NAME "MY BLE DEVICE"
+#define DEVICE_NAME "BRUH"
 uint8_t ble_addr_type;
 void ble_app_scan(void);
 

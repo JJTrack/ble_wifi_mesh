@@ -10,9 +10,13 @@
 #include "nvs_flash.h"
 #include "wifi_mesh_example.h"
 #include "ble_example.h"
+#include "globals.h"
 
 void app_main(void)
 {
+    ble_uuid_queue = xQueueCreate(3, sizeof(ble_data_for_queue_t));
+    
+
     ESP_ERROR_CHECK(nvs_flash_init());
     /*  tcpip initialization */
     tcpip_adapter_init();
@@ -35,7 +39,7 @@ void app_main(void)
     ESP_ERROR_CHECK(esp_event_handler_register(MESH_EVENT, ESP_EVENT_ANY_ID, &mesh_event_handler, NULL));
     ESP_ERROR_CHECK(esp_mesh_set_max_layer(CONFIG_MESH_MAX_LAYER));
     ESP_ERROR_CHECK(esp_mesh_set_vote_percentage(1));
-    ESP_ERROR_CHECK(esp_mesh_set_ap_assoc_expire(30));
+    ESP_ERROR_CHECK(esp_mesh_set_ap_assoc_expire(50));
     mesh_cfg_t cfg = MESH_INIT_CONFIG_DEFAULT();
     /* mesh ID */
     memcpy((uint8_t *)&cfg.mesh_id, MESH_ID, 6);
@@ -69,6 +73,5 @@ void app_main(void)
 
     ble_hs_cfg.sync_cb = ble_app_on_sync;
     nimble_port_freertos_init(host_task);
-
 
 }
