@@ -17,7 +17,7 @@ void esp_mesh_p2p_tx_main(void *arg)
     esp_err_t err;
     int send_count = 0;
     mesh_data_t data;
-    data.size = sizeof(MESH_ID);
+    data.size = 21;
     data.proto = MESH_PROTO_BIN;
     data.tos = MESH_TOS_P2P;
     is_running = true;
@@ -74,6 +74,9 @@ void esp_mesh_p2p_tx_main(void *arg)
                 ESP_LOGE("SENDING ERROR", "CANNOT SEND DATA PACKET");
             } else {
                 ESP_LOGE("SENDING SUCCESS", "DATA PACKET SENT");
+                ESP_LOGE("SENDING", "This is the rx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
+                data.data[6] & 0xff, data.data[5] & 0xff, data.data[4] & 0xff,
+                data.data[3] & 0xff, data.data[2] & 0xff, data.data[1] & 0xff);
             }
         }
 
@@ -101,26 +104,16 @@ void esp_mesh_p2p_rx_main(void *arg)
             ESP_LOGE(MESH_TAG, "err:0x%x, size:%d", err, data.size);
             continue;
         }
-        /* extract send count */
-        if (data.size >= sizeof(send_count)) {
-            send_count = (data.data[25] << 24) | (data.data[24] << 16)
-                | (data.data[23] << 8) | data.data[22];
-        }
-        recv_count++;
-        /* process light control */
 
-        if (!(recv_count % 1)) {
-            ESP_LOGW(MESH_TAG,
-                "[#RX:%d/%d][L:%d] parent:"MACSTR", receive from "MACSTR", size:%d, heap:%d, flag:%d[err:0x%x, proto:%d, tos:%d]",
-                recv_count, send_count, mesh_layer,
-                MAC2STR(mesh_parent_addr.addr), MAC2STR(from.addr),
-                data.size, esp_get_free_heap_size(), flag, err, data.proto,
-                data.tos);
-        }
+        ESP_LOGE("RECEIVE", "This is the rx_nodeuuid: %02x:%02x:%02x:%02x:%02x:%02x",
+        data.data[7] & 0xff, data.data[8] & 0xff, data.data[9] & 0xff,
+        data.data[10] & 0xff, data.data[11] & 0xff, data.data[12] & 0xff);
 
         ESP_LOGE("RECEIVE", "This is the rx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
         data.data[6] & 0xff, data.data[5] & 0xff, data.data[4] & 0xff,
         data.data[3] & 0xff, data.data[2] & 0xff, data.data[1] & 0xff);
+
+        ESP_LOGE("RECEIVE", "This is the rx_rssi: %d", data.data[0]);
     }
     
     vTaskDelete(NULL);
