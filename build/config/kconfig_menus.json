@@ -1895,6 +1895,77 @@
                 "children": [
                     {
                         "children": [], 
+                        "depends_on": "<choice EXAMPLE_IP_MODE>", 
+                        "help": null, 
+                        "id": "EXAMPLE_IPV4", 
+                        "name": "EXAMPLE_IPV4", 
+                        "range": null, 
+                        "title": "IPV4", 
+                        "type": "bool"
+                    }, 
+                    {
+                        "children": [], 
+                        "depends_on": "<choice EXAMPLE_IP_MODE>", 
+                        "help": null, 
+                        "id": "EXAMPLE_IPV6", 
+                        "name": "EXAMPLE_IPV6", 
+                        "range": null, 
+                        "title": "IPV6", 
+                        "type": "bool"
+                    }
+                ], 
+                "depends_on": null, 
+                "help": "Example can use either IPV4 or IPV6.", 
+                "id": "tcp-configuration-ip-version", 
+                "name": "EXAMPLE_IP_MODE", 
+                "title": "IP Version", 
+                "type": "choice"
+            }, 
+            {
+                "children": [], 
+                "depends_on": "EXAMPLE_IPV4", 
+                "help": "The example will connect to this IPV4 address.", 
+                "id": "EXAMPLE_IPV4_ADDR", 
+                "name": "EXAMPLE_IPV4_ADDR", 
+                "range": null, 
+                "title": "IPV4 Address", 
+                "type": "string"
+            }, 
+            {
+                "children": [], 
+                "depends_on": "EXAMPLE_IPV6", 
+                "help": "The example will connect to this IPV6 address.", 
+                "id": "EXAMPLE_IPV6_ADDR", 
+                "name": "EXAMPLE_IPV6_ADDR", 
+                "range": null, 
+                "title": "IPV6 Address", 
+                "type": "string"
+            }, 
+            {
+                "children": [], 
+                "depends_on": null, 
+                "help": "The remote port to which the client example will connect to.", 
+                "id": "EXAMPLE_PORT", 
+                "name": "EXAMPLE_PORT", 
+                "range": [
+                    0, 
+                    65535
+                ], 
+                "title": "Port", 
+                "type": "int"
+            }
+        ], 
+        "depends_on": null, 
+        "id": "tcp-configuration", 
+        "title": "TCP Configuration", 
+        "type": "menu"
+    }, 
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [], 
                         "depends_on": "<choice COMPILER_OPTIMIZATION>", 
                         "help": null, 
                         "id": "COMPILER_OPTIMIZATION_DEFAULT", 
