@@ -89,7 +89,7 @@ static void tcp_client_task(void *pvParameters)
 void esp_mesh_p2p_tx_main(void *arg)
 {
     extern xQueueHandle ble_data_queue;
-    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 33}; 
+    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 13}; 
     uint8_t PacketID[8] = {5, 2, 12, 4, 5, 6, 42, 88};
     uint8_t dataPacket[21];
     esp_err_t err;
@@ -102,16 +102,6 @@ void esp_mesh_p2p_tx_main(void *arg)
 
     while (is_running) {
         /* non-root do nothing but print */
-        if (!esp_mesh_is_root()) {
-            ESP_LOGI("ROOT", "This is not the root node");
-            vTaskDelay(10 * 1000 / portTICK_RATE_MS);
-        }
-
-        if (esp_mesh_is_root()) {
-            ESP_LOGI("ROOT", "THIS IS THE ROOT NODE");
-            vTaskDelay(10 * 1000 / portTICK_RATE_MS);
-            continue;
-        }
 
         ble_data_for_queue_t tx_uuid;
 
@@ -146,16 +136,31 @@ void esp_mesh_p2p_tx_main(void *arg)
             tx_buf[23] = (send_count >> 8) & 0xff;
             tx_buf[22] = (send_count >> 0) & 0xff;
 
-            err = esp_mesh_send(NULL, &data, 0, NULL, 0);
+            if (!esp_mesh_is_root()) {
+                ESP_LOGI("ROOT", "This is not the root node");
 
-            if(err) {
-                ESP_LOGE("SENDING ERROR", "CANNOT SEND DATA PACKET");
-            } else {
-                ESP_LOGE("SENDING SUCCESS", "DATA PACKET SENT");
-                ESP_LOGE("SENDING", "This is the rx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
-                data.data[6] & 0xff, data.data[5] & 0xff, data.data[4] & 0xff,
-                data.data[3] & 0xff, data.data[2] & 0xff, data.data[1] & 0xff);
+                err = esp_mesh_send(NULL, &data, 0, NULL, 0);
+
+                if(err) {
+                    ESP_LOGE("SENDING ERROR", "CANNOT SEND DATA PACKET");
+                } else {
+                    ESP_LOGE("SENDING SUCCESS", "DATA PACKET SENT");
+                    ESP_LOGE("SENDING", "This is the rx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
+                    data.data[6] & 0xff, data.data[5] & 0xff, data.data[4] & 0xff,
+                    data.data[3] & 0xff, data.data[2] & 0xff, data.data[1] & 0xff);
+                }
+
+                vTaskDelay(10 * 1000 / portTICK_RATE_MS);
             }
+
+            else {
+                ESP_LOGI("ROOT", "THIS IS THE ROOT NODE");
+                err = send(sock, data.data, data.size, 0);
+                vTaskDelay(10 * 1000 / portTICK_RATE_MS);
+            }
+
+            
+
         }
 
 

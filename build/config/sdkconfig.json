@@ -316,7 +316,7 @@
     "ETH_USE_OPENETH": false, 
     "ETH_USE_SPI_ETHERNET": true, 
     "EXAMPLE_IPV4": true, 
-    "EXAMPLE_IPV4_ADDR": "192.168.1.72", 
+    "EXAMPLE_IPV4_ADDR": "192.168.1.70", 
     "EXAMPLE_IPV6": false, 
     "EXAMPLE_PORT": 8080, 
     "FATFS_CODEPAGE": 437, 
