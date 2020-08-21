@@ -20,6 +20,7 @@
  /*******************************************************
   *                Variable Definitions
   *******************************************************/
+mesh_addr_t mesh_to_server;
 static const char *MESH_TAG = "mesh_main";
 static const uint8_t NODE_ID[6] ={ 1, 0, 0, 0, 0, 0 };
 static const uint8_t MESH_ID[6] ={ 0x77, 0x77, 0x77, 0x77, 0x77, 0x77 };
@@ -29,6 +30,7 @@ static bool is_running = true;
 static bool is_mesh_connected = false;
 static mesh_addr_t mesh_parent_addr;
 static int mesh_layer = -1;
+int sock;
 
 void esp_mesh_p2p_tx_main(void *arg);
 void esp_mesh_p2p_rx_main(void *arg);

@@ -11,7 +11,7 @@
 void esp_mesh_p2p_tx_main(void *arg)
 {
     extern xQueueHandle ble_data_queue;
-    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 32}; 
+    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 33}; 
     uint8_t PacketID[8] = {5, 2, 12, 4, 5, 6, 42, 88};
     uint8_t dataPacket[21];
     esp_err_t err;
@@ -323,4 +323,3 @@ void ip_event_handler(void *arg, esp_event_base_t event_base,
     ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
     ESP_LOGI(MESH_TAG, "<IP_EVENT_STA_GOT_IP>IP:%s", ip4addr_ntoa(&event->ip_info.ip));
 }
-

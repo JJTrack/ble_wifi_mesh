@@ -18,9 +18,9 @@ void add_val_to_queue(void * params)
     ok = xQueueSend(ble_data_queue, &stuff, 1000 / portTICK_PERIOD_MS);
 
     if(ok) {
-        ESP_LOGI("QUEUE", "ADDED UUID");
+        ESP_LOGI("QUEUE", "ADDED DATA TO QUEUE");
     } else {
-        ESP_LOGI("QUEUE", "FAILED TO ADD UUID");
+        ESP_LOGI("QUEUE", "FAILED TO ADD DATA TO QUEUE");
     }
 
     vTaskDelete(NULL);
