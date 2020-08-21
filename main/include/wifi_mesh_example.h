@@ -9,6 +9,17 @@
 #include "esp_mesh.h"
 #include "esp_mesh_internal.h"
 
+#include <sys/param.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/event_groups.h"
+#include "tcpip_adapter.h"
+//#include "protocol_examples_common.h"
+#include "lwip/err.h"
+#include "lwip/sockets.h"
+#include "lwip/sys.h"
+#include <lwip/netdb.h>
+
 
 /*******************************************************
  *                Constants
@@ -16,10 +27,24 @@
 
 #define RX_SIZE          (1500)
 #define TX_SIZE          (1460)
+#define RX_SIZE          (1500)
+#define TX_SIZE          (1460)
+#define TCP_PACKET_SIZE   21
+
+//TCP Stuff
+#ifdef CONFIG_EXAMPLE_IPV4
+#define HOST_IP_ADDR CONFIG_EXAMPLE_IPV4_ADDR
+#else
+#define HOST_IP_ADDR CONFIG_EXAMPLE_IPV6_ADDR
+#endif
+
+#define PORT CONFIG_EXAMPLE_PORT
 
  /*******************************************************
   *                Variable Definitions
   *******************************************************/
+static const char *TAG = "example";
+static const char *TCP = "TCP";
 mesh_addr_t mesh_to_server;
 static const char *MESH_TAG = "mesh_main";
 static const uint8_t NODE_ID[6] ={ 1, 0, 0, 0, 0, 0 };

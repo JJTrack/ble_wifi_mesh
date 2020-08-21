@@ -8,6 +8,84 @@
 #include "esp_mesh_internal.h"
 #include "globals.h"
 
+static void tcp_client_task(void *pvParameters)
+{
+
+    ESP_LOGE("TCP", "STARTING TCP");
+    char rx_buffer[128];
+    char addr_str[128];
+    int addr_family;
+    int ip_protocol;
+
+    while (1) {
+
+#ifdef CONFIG_EXAMPLE_IPV4
+        struct sockaddr_in dest_addr;
+        dest_addr.sin_addr.s_addr = inet_addr(HOST_IP_ADDR);
+        dest_addr.sin_family = AF_INET;
+        dest_addr.sin_port = htons(PORT);
+        addr_family = AF_INET;
+        ip_protocol = IPPROTO_IP;
+        inet_ntoa_r(dest_addr.sin_addr, addr_str, sizeof(addr_str) - 1);
+#else // IPV6
+        ESP_LOGE("IP Version", "Connected using IPV6");
+        struct sockaddr_in6 dest_addr = { 0 };
+        inet6_aton(HOST_IP_ADDR, &dest_addr.sin6_addr);
+        dest_addr.sin6_family = AF_INET6;
+        dest_addr.sin6_port = htons(PORT);
+        // Setting scope_id to the connecting interface for correct routing if IPv6 Local Link supplied
+        dest_addr.sin6_scope_id = esp_netif_get_netif_impl_index(EXAMPLE_INTERFACE);
+        addr_family = AF_INET6;
+        ip_protocol = IPPROTO_IPV6;
+        inet6_ntoa_r(dest_addr.sin6_addr, addr_str, sizeof(addr_str) - 1);
+#endif
+
+        sock =  socket(addr_family, SOCK_STREAM, ip_protocol);
+        if (sock < 0) {
+            ESP_LOGE(TCP, "Unable to create socket: errno %d", errno);
+            break;
+        }
+        ESP_LOGI(TCP, "Socket created, connecting to %s:%d", HOST_IP_ADDR, PORT);
+
+        int err = connect(sock, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+        if (err != 0) {
+            ESP_LOGE(TCP, "Socket unable to connect: errno %d", errno);
+            break;
+        }
+        ESP_LOGI(TCP, "Successfully connected");
+
+        while (1) {
+            if (err < 0) {
+                ESP_LOGE(TCP, "Error occurred during sending: errno %d", errno);
+                break;
+            }
+
+            int len = recv(sock, rx_buffer, sizeof(rx_buffer) - 1, 0);
+            // Error occurred during receiving
+            if (len < 0) {
+                ESP_LOGE(TCP, "recv failed: errno %d", errno);
+                break;
+            }
+            // Data received
+            else {
+                rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string
+                ESP_LOGI(TAG, "Received %d bytes from %s:", len, addr_str);
+                ESP_LOGI(TAG, "%s", rx_buffer);
+            }
+
+            vTaskDelay(2000 / portTICK_PERIOD_MS);
+        }
+
+        if (sock != -1) {
+            ESP_LOGE(TCP, "Shutting down socket and restarting...");
+            shutdown(sock, 0);
+            close(sock);
+        }
+    }
+    vTaskDelete(NULL);
+}
+
+
 void esp_mesh_p2p_tx_main(void *arg)
 {
     extern xQueueHandle ble_data_queue;
@@ -17,7 +95,7 @@ void esp_mesh_p2p_tx_main(void *arg)
     esp_err_t err;
     int send_count = 0;
     mesh_data_t data;
-    data.size = 21;
+    data.size = TCP_PACKET_SIZE;
     data.proto = MESH_PROTO_BIN;
     data.tos = MESH_TOS_P2P;
     is_running = true;
@@ -104,6 +182,8 @@ void esp_mesh_p2p_rx_main(void *arg)
             ESP_LOGE(MESH_TAG, "err:0x%x, size:%d", err, data.size);
             continue;
         }
+
+        int error = send(sock, data.data, data.size, 0);
 
         ESP_LOGE("RECEIVE", "This is the rx_nodeuuid: %02x:%02x:%02x:%02x:%02x:%02x",
         data.data[7] & 0xff, data.data[8] & 0xff, data.data[9] & 0xff,
@@ -322,4 +402,6 @@ void ip_event_handler(void *arg, esp_event_base_t event_base,
 {
     ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
     ESP_LOGI(MESH_TAG, "<IP_EVENT_STA_GOT_IP>IP:%s", ip4addr_ntoa(&event->ip_info.ip));
+
+    xTaskCreate(tcp_client_task, "tcp_client", 4096, NULL, 5, NULL);
 }
