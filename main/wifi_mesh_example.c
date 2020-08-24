@@ -89,7 +89,7 @@ static void tcp_client_task(void *pvParameters)
 void esp_mesh_p2p_tx_main(void *arg)
 {
     extern xQueueHandle ble_data_queue;
-    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 13}; 
+    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 11}; 
     uint8_t PacketID[8] = {5, 2, 12, 4, 5, 6, 42, 88};
     uint8_t dataPacket[21];
     esp_err_t err;
@@ -149,14 +149,11 @@ void esp_mesh_p2p_tx_main(void *arg)
                     data.data[6] & 0xff, data.data[5] & 0xff, data.data[4] & 0xff,
                     data.data[3] & 0xff, data.data[2] & 0xff, data.data[1] & 0xff);
                 }
-
-                vTaskDelay(10 * 1000 / portTICK_RATE_MS);
             }
 
             else {
                 ESP_LOGI("ROOT", "THIS IS THE ROOT NODE");
                 err = send(sock, data.data, data.size, 0);
-                vTaskDelay(10 * 1000 / portTICK_RATE_MS);
             }
 
             
