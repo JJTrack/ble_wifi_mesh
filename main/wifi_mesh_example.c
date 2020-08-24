@@ -72,8 +72,6 @@ static void tcp_client_task(void *pvParameters)
                 ESP_LOGI(TAG, "Received %d bytes from %s:", len, addr_str);
                 ESP_LOGI(TAG, "%s", rx_buffer);
             }
-
-            vTaskDelay(2000 / portTICK_PERIOD_MS);
         }
 
         if (sock != -1) {
@@ -105,10 +103,7 @@ void esp_mesh_p2p_tx_main(void *arg)
 
         ble_data_for_queue_t tx_uuid;
 
-        if(xQueueReceive(ble_data_queue, &tx_uuid, 1000 / portTICK_PERIOD_MS)) {
-            ESP_LOGE("QUEUE", "This is the tx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
-            tx_uuid.uuid[5] & 0xff, tx_uuid.uuid[4] & 0xff, tx_uuid.uuid[3] & 0xff,
-            tx_uuid.uuid[2] & 0xff, tx_uuid.uuid[1] & 0xff, tx_uuid.uuid[0] & 0xff);
+        if(xQueueReceive(ble_data_queue, &tx_uuid, 5000 / portTICK_PERIOD_MS)) {
 
             ESP_LOGE("QUEUE", "This is the tx_rssi: %d", tx_uuid.rssi);
 
@@ -145,9 +140,6 @@ void esp_mesh_p2p_tx_main(void *arg)
                     ESP_LOGE("SENDING ERROR", "CANNOT SEND DATA PACKET");
                 } else {
                     ESP_LOGE("SENDING SUCCESS", "DATA PACKET SENT");
-                    ESP_LOGE("SENDING", "This is the rx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
-                    data.data[6] & 0xff, data.data[5] & 0xff, data.data[4] & 0xff,
-                    data.data[3] & 0xff, data.data[2] & 0xff, data.data[1] & 0xff);
                 }
             }
 
@@ -187,15 +179,6 @@ void esp_mesh_p2p_rx_main(void *arg)
 
         int error = send(sock, data.data, data.size, 0);
 
-        ESP_LOGE("RECEIVE", "This is the rx_nodeuuid: %02x:%02x:%02x:%02x:%02x:%02x",
-        data.data[7] & 0xff, data.data[8] & 0xff, data.data[9] & 0xff,
-        data.data[10] & 0xff, data.data[11] & 0xff, data.data[12] & 0xff);
-
-        ESP_LOGE("RECEIVE", "This is the rx_uuid: %02x:%02x:%02x:%02x:%02x:%02x",
-        data.data[6] & 0xff, data.data[5] & 0xff, data.data[4] & 0xff,
-        data.data[3] & 0xff, data.data[2] & 0xff, data.data[1] & 0xff);
-
-        ESP_LOGE("RECEIVE", "This is the rx_rssi: %d", data.data[0]);
     }
     
     vTaskDelete(NULL);
@@ -207,8 +190,8 @@ esp_err_t esp_mesh_comm_p2p_start(void)
     if (!is_comm_p2p_started) {
         is_comm_p2p_started = true;
 
-        xTaskCreate(esp_mesh_p2p_tx_main, "MPTX", 3072, NULL, 5, NULL);
-        xTaskCreate(esp_mesh_p2p_rx_main, "MPRX", 3072, NULL, 5, NULL);
+        xTaskCreate(esp_mesh_p2p_tx_main, "MPTX", 3072, NULL, 1, NULL);
+        xTaskCreate(esp_mesh_p2p_rx_main, "MPRX", 3072, NULL, 2, NULL);
         
     }
     return ESP_OK;
@@ -405,5 +388,5 @@ void ip_event_handler(void *arg, esp_event_base_t event_base,
     ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
     ESP_LOGI(MESH_TAG, "<IP_EVENT_STA_GOT_IP>IP:%s", ip4addr_ntoa(&event->ip_info.ip));
 
-    xTaskCreate(tcp_client_task, "tcp_client", 4096, NULL, 5, NULL);
+    xTaskCreate(tcp_client_task, "tcp_client", 4096, NULL, 1, NULL);
 }

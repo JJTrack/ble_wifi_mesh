@@ -1,8 +1,0 @@
-# Automatically generated build file. Do not edit.
-COMPONENT_INCLUDES += $(IDF_PATH)/components/bt/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/include $(IDF_PATH)/components/bt/host/nimble/nimble/porting/nimble/include $(IDF_PATH)/components/bt/host/nimble/nimble/porting/npl/freertos/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/services/ans/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/services/bas/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/services/gap/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/services/gatt/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/services/ias/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/services/ipss/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/services/lls/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/services/tps/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/util/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/store/ram/include $(IDF_PATH)/components/bt/host/nimble/nimble/nimble/host/store/config/include $(IDF_PATH)/components/bt/host/nimble/esp-hci/include $(IDF_PATH)/components/bt/host/nimble/port/include
-COMPONENT_LDFLAGS += -L$(BUILD_DIR_BASE)/bt -lbt -L $(IDF_PATH)/components/bt/controller/lib -lbtdm_app
-COMPONENT_LINKER_DEPS += $(IDF_PATH)/components/bt/controller/lib/libbtdm_app.a
-COMPONENT_SUBMODULES += $(IDF_PATH)/components/bt/controller/lib
-COMPONENT_LIBRARIES += bt
-COMPONENT_LDFRAGMENTS += 
-component-bt-build: 

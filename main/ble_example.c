@@ -38,13 +38,7 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg)
             ble_data_for_queue_t stuff;
             stuff.rssi = event->disc.rssi;
             memcpy(stuff.uuid, event->disc.addr.val, 6);
-            xTaskCreate(&add_val_to_queue, "add_to_queue", 2048, &stuff, 2, NULL);
-
-            ESP_LOGI("NAME", "This is the name: %.*s", fields.name_len, fields.name);
-            ESP_LOGI("UUID", "This is the uuid: %02x:%02x:%02x:%02x:%02x:%02x",
-            event->disc.addr.val[5] & 0xff, event->disc.addr.val[4] & 0xff, event->disc.addr.val[3] & 0xff,
-            event->disc.addr.val[2] & 0xff, event->disc.addr.val[1] & 0xff, event->disc.addr.val[0] & 0xff);
-            ESP_LOGI("RSSI", "This is an rssi value: %d\n", event->disc.rssi );
+            xTaskCreate(&add_val_to_queue, "add_to_queue", 2048, &stuff, 1, NULL);
         }
         
         // ble_gap_disc_cancel();
