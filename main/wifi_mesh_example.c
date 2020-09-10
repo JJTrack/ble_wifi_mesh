@@ -87,7 +87,7 @@ static void tcp_client_task(void *pvParameters)
 void esp_mesh_p2p_tx_main(void *arg)
 {
     extern xQueueHandle ble_data_queue;
-    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 11}; 
+    uint8_t NodeUUID[6] = {123, 231, 213, 90, 88, 12}; 
     uint8_t PacketID[8] = {5, 2, 12, 4, 5, 6, 42, 88};
     uint8_t dataPacket[21];
     esp_err_t err;
@@ -103,7 +103,7 @@ void esp_mesh_p2p_tx_main(void *arg)
 
         ble_data_for_queue_t tx_uuid;
 
-        if(xQueueReceive(ble_data_queue, &tx_uuid, 5000 / portTICK_PERIOD_MS)) {
+        if(xQueueReceive(ble_data_queue, &tx_uuid, 500 / portTICK_PERIOD_MS)) {
 
             ESP_LOGE("QUEUE", "This is the tx_rssi: %d", tx_uuid.rssi);
 

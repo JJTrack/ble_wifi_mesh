@@ -73,8 +73,6 @@ build CMakeFiles/bootloader.elf.dir/project_elf_src.c.obj: C_COMPILER__bootloade
   INCLUDES = -I/Users/jono/esp/esp-idf/components/esp32/include -Iconfig -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader
   OBJECT_DIR = CMakeFiles/bootloader.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/bootloader.elf.dir
-  TARGET_COMPILE_PDB = CMakeFiles/bootloader.elf.dir/
-  TARGET_PDB = bootloader.elf.pdb
 
 
 # =============================================================================
@@ -90,9 +88,8 @@ build bootloader.elf: C_EXECUTABLE_LINKER__bootloader.2eelf_ CMakeFiles/bootload
   OBJECT_DIR = CMakeFiles/bootloader.elf.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/bootloader.elf.dir/
   TARGET_FILE = bootloader.elf
-  TARGET_PDB = bootloader.elf.pdb
+  TARGET_PDB = bootloader.elf.dbg
 
 
 #############################################
@@ -336,8 +333,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/cpu_util.c.obj: C_COMPILER____idf
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/memory_layout_utils.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/memory_layout_utils.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/memory_layout_utils.c.obj.d
@@ -345,8 +340,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/memory_layout_utils.c.obj: C_COMP
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/lldesc.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/lldesc.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/lldesc.c.obj.d
@@ -354,8 +347,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/lldesc.c.obj: C_COMPILER____idf_s
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/cpu_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/cpu_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/cpu_hal.c.obj.d
@@ -363,8 +354,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/cpu_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/rmt_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/rmt_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/rmt_hal.c.obj.d
@@ -372,8 +361,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/rmt_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/rtc_io_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/rtc_io_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/rtc_io_hal.c.obj.d
@@ -381,8 +368,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/rtc_io_hal.c.obj: C_COMPILER_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/dac_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/dac_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/dac_hal.c.obj.d
@@ -390,8 +375,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/dac_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/adc_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/adc_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/adc_hal.c.obj.d
@@ -399,8 +382,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/adc_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/spi_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal.c.obj.d
@@ -408,8 +389,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal_iram.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/spi_hal_iram.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal_iram.c.obj.d
@@ -417,8 +396,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal_iram.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/spi_slave_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal.c.obj.d
@@ -426,8 +403,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal_iram.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/spi_slave_hal_iram.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal_iram.c.obj.d
@@ -435,8 +410,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal_iram.c.obj: C_C
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/touch_sensor_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/touch_sensor_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/touch_sensor_hal.c.obj.d
@@ -444,8 +417,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/touch_sensor_hal.c.obj: C_COM
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/soc_include_legacy_warn.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/soc_include_legacy_warn.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/soc_include_legacy_warn.c.obj.d
@@ -453,8 +424,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/soc_include_legacy_warn.c.obj: C_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/pcnt_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/pcnt_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/pcnt_hal.c.obj.d
@@ -462,8 +431,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/pcnt_hal.c.obj: C_COMPILER___
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2s_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/i2s_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2s_hal.c.obj.d
@@ -471,8 +438,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2s_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/sigmadelta_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/sigmadelta_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/sigmadelta_hal.c.obj.d
@@ -480,8 +445,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/sigmadelta_hal.c.obj: C_COMPI
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/timer_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/timer_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/timer_hal.c.obj.d
@@ -489,8 +452,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/timer_hal.c.obj: C_COMPILER__
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/ledc_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/ledc_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/ledc_hal.c.obj.d
@@ -498,8 +459,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/ledc_hal.c.obj: C_COMPILER___
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/ledc_hal_iram.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/ledc_hal_iram.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/ledc_hal_iram.c.obj.d
@@ -507,8 +466,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/ledc_hal_iram.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2c_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/i2c_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2c_hal.c.obj.d
@@ -516,8 +473,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2c_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2c_hal_iram.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/i2c_hal_iram.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2c_hal_iram.c.obj.d
@@ -525,8 +480,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/i2c_hal_iram.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/gpio_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/gpio_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/gpio_hal.c.obj.d
@@ -534,8 +487,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/gpio_hal.c.obj: C_COMPILER___
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/uart_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/uart_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/uart_hal.c.obj.d
@@ -543,8 +494,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/uart_hal.c.obj: C_COMPILER___
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/uart_hal_iram.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/uart_hal_iram.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/uart_hal_iram.c.obj.d
@@ -552,8 +501,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/uart_hal_iram.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/spi_flash_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal.c.obj.d
@@ -561,8 +508,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal_iram.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/spi_flash_hal_iram.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal_iram.c.obj.d
@@ -570,8 +515,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal_iram.c.obj: C_C
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/mpu_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/mpu_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/mpu_hal.c.obj.d
@@ -579,8 +522,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/mpu_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/soc_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/soc_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/soc_hal.c.obj.d
@@ -588,8 +529,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/soc_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/wdt_hal_iram.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/wdt_hal_iram.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/wdt_hal_iram.c.obj.d
@@ -597,8 +536,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/wdt_hal_iram.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/compare_set.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/compare_set.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/compare_set.c.obj.d
@@ -606,8 +543,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/compare_set.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/twai_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/twai_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/twai_hal.c.obj.d
@@ -615,8 +550,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/twai_hal.c.obj: C_COMPILER___
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/mcpwm_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/mcpwm_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/mcpwm_hal.c.obj.d
@@ -624,8 +557,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/mcpwm_hal.c.obj: C_COMPILER__
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/sdio_slave_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/hal/sdio_slave_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/sdio_slave_hal.c.obj.d
@@ -633,8 +564,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/sdio_slave_hal.c.obj: C_COMPI
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/adc_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/adc_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/adc_hal.c.obj.d
@@ -642,8 +571,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/adc_hal.c.obj: C_COMPILER__
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/brownout_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/brownout_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/brownout_hal.c.obj.d
@@ -651,8 +578,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/brownout_hal.c.obj: C_COMPI
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_clk.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/rtc_clk.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_clk.c.obj.d
@@ -660,8 +585,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_clk.c.obj: C_COMPILER__
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_clk_init.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/rtc_clk_init.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_clk_init.c.obj.d
@@ -669,8 +592,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_clk_init.c.obj: C_COMPI
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_init.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/rtc_init.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_init.c.obj.d
@@ -678,8 +599,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_init.c.obj: C_COMPILER_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_pm.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/rtc_pm.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_pm.c.obj.d
@@ -687,8 +606,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_pm.c.obj: C_COMPILER___
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_sleep.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/rtc_sleep.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_sleep.c.obj.d
@@ -696,8 +613,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_sleep.c.obj: C_COMPILER
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_time.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/rtc_time.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_time.c.obj.d
@@ -705,8 +620,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_time.c.obj: C_COMPILER_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_wdt.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/rtc_wdt.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_wdt.c.obj.d
@@ -714,8 +627,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/rtc_wdt.c.obj: C_COMPILER__
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/soc_memory_layout.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/soc_memory_layout.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/soc_memory_layout.c.obj.d
@@ -723,8 +634,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/soc_memory_layout.c.obj: C_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/touch_sensor_hal.c.obj: C_COMPILER____idf_soc_ /Users/jono/esp/esp-idf/components/soc/src/esp32/touch_sensor_hal.c || cmake_object_order_depends_target___idf_soc_
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/touch_sensor_hal.c.obj.d
@@ -732,8 +641,6 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32/touch_sensor_hal.c.obj: C_C
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/../hal -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 
 # =============================================================================
@@ -748,9 +655,8 @@ build esp-idf/soc/libsoc.a: C_STATIC_LIBRARY_LINKER____idf_soc_ esp-idf/soc/CMak
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
   TARGET_FILE = esp-idf/soc/libsoc.a
-  TARGET_PDB = esp-idf/soc/libsoc.pdb
+  TARGET_PDB = soc.a.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -851,8 +757,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/adc_periph.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/dac_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/dac_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/dac_periph.c.obj.d
@@ -860,8 +764,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/dac_periph.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/gpio_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/gpio_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/gpio_periph.c.obj.d
@@ -869,8 +771,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/gpio_periph.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/rtc_io_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/rtc_io_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/rtc_io_periph.c.obj.d
@@ -878,8 +778,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/rtc_io_periph.c.obj: C_COMP
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/rtc_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/rtc_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/rtc_periph.c.obj.d
@@ -887,8 +785,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/rtc_periph.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/sdio_slave_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/sdio_slave_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/sdio_slave_periph.c.obj.d
@@ -896,8 +792,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/sdio_slave_periph.c.obj: C_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/sdmmc_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/sdmmc_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/sdmmc_periph.c.obj.d
@@ -905,8 +799,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/sdmmc_periph.c.obj: C_COMPI
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/interrupts.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/interrupts.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/interrupts.c.obj.d
@@ -914,8 +806,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/interrupts.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/spi_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/spi_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/spi_periph.c.obj.d
@@ -923,8 +813,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/spi_periph.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/ledc_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/ledc_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/ledc_periph.c.obj.d
@@ -932,8 +820,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/ledc_periph.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/i2s_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/i2s_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/i2s_periph.c.obj.d
@@ -941,8 +827,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/i2s_periph.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/i2c_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/i2c_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/i2c_periph.c.obj.d
@@ -950,8 +834,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/i2c_periph.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/uart_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/uart_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/uart_periph.c.obj.d
@@ -959,8 +841,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/uart_periph.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/touch_sensor_periph.c.obj: C_COMPILER__soc_esp32_ /Users/jono/esp/esp-idf/components/soc/soc/esp32/touch_sensor_periph.c || cmake_object_order_depends_target_soc_esp32_
   DEP_FILE = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/touch_sensor_periph.c.obj.d
@@ -968,8 +848,6 @@ build esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/touch_sensor_periph.c.obj: 
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   OBJECT_FILE_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
 
 
 # =============================================================================
@@ -984,9 +862,8 @@ build esp-idf/soc/soc/esp32/libsoc_esp32.a: C_STATIC_LIBRARY_LINKER__soc_esp32_ 
   OBJECT_DIR = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/soc_esp32.pdb
   TARGET_FILE = esp-idf/soc/soc/esp32/libsoc_esp32.a
-  TARGET_PDB = esp-idf/soc/soc/esp32/libsoc_esp32.pdb
+  TARGET_PDB = soc_esp32.a.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1087,8 +964,6 @@ build esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj: C_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_rom/esp32 -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir
   OBJECT_FILE_DIR = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches
-  TARGET_COMPILE_PDB = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/__idf_esp_rom.pdb
-  TARGET_PDB = esp-idf/esp_rom/libesp_rom.pdb
 
 build esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj: C_COMPILER____idf_esp_rom_ /Users/jono/esp/esp-idf/components/esp_rom/patches/esp_rom_sys.c || cmake_object_order_depends_target___idf_esp_rom_
   DEP_FILE = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj.d
@@ -1096,8 +971,6 @@ build esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj: C_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_rom/esp32 -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir
   OBJECT_FILE_DIR = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches
-  TARGET_COMPILE_PDB = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/__idf_esp_rom.pdb
-  TARGET_PDB = esp-idf/esp_rom/libesp_rom.pdb
 
 build esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj: C_COMPILER____idf_esp_rom_ /Users/jono/esp/esp-idf/components/esp_rom/patches/esp_rom_uart.c || cmake_object_order_depends_target___idf_esp_rom_
   DEP_FILE = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj.d
@@ -1105,8 +978,6 @@ build esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj: C
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_rom/esp32 -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir
   OBJECT_FILE_DIR = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches
-  TARGET_COMPILE_PDB = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/__idf_esp_rom.pdb
-  TARGET_PDB = esp-idf/esp_rom/libesp_rom.pdb
 
 
 # =============================================================================
@@ -1121,9 +992,8 @@ build esp-idf/esp_rom/libesp_rom.a: C_STATIC_LIBRARY_LINKER____idf_esp_rom_ esp-
   OBJECT_DIR = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/__idf_esp_rom.pdb
   TARGET_FILE = esp-idf/esp_rom/libesp_rom.a
-  TARGET_PDB = esp-idf/esp_rom/libesp_rom.pdb
+  TARGET_PDB = esp_rom.a.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1168,8 +1038,6 @@ build esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj: C_COMPILER____idf_log_ /Us
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
   OBJECT_FILE_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
-  TARGET_COMPILE_PDB = esp-idf/log/CMakeFiles/__idf_log.dir/__idf_log.pdb
-  TARGET_PDB = esp-idf/log/liblog.pdb
 
 build esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj: C_COMPILER____idf_log_ /Users/jono/esp/esp-idf/components/log/log_buffers.c || cmake_object_order_depends_target___idf_log_
   DEP_FILE = esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj.d
@@ -1177,8 +1045,6 @@ build esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj: C_COMPILER____idf_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
   OBJECT_FILE_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
-  TARGET_COMPILE_PDB = esp-idf/log/CMakeFiles/__idf_log.dir/__idf_log.pdb
-  TARGET_PDB = esp-idf/log/liblog.pdb
 
 build esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj: C_COMPILER____idf_log_ /Users/jono/esp/esp-idf/components/log/log_noos.c || cmake_object_order_depends_target___idf_log_
   DEP_FILE = esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj.d
@@ -1186,8 +1052,6 @@ build esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj: C_COMPILER____idf_log
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
   OBJECT_FILE_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
-  TARGET_COMPILE_PDB = esp-idf/log/CMakeFiles/__idf_log.dir/__idf_log.pdb
-  TARGET_PDB = esp-idf/log/liblog.pdb
 
 
 # =============================================================================
@@ -1202,9 +1066,8 @@ build esp-idf/log/liblog.a: C_STATIC_LIBRARY_LINKER____idf_log_ esp-idf/log/CMak
   OBJECT_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/log/CMakeFiles/__idf_log.dir/__idf_log.pdb
   TARGET_FILE = esp-idf/log/liblog.a
-  TARGET_PDB = esp-idf/log/liblog.pdb
+  TARGET_PDB = log.a.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1305,8 +1168,6 @@ build esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.o
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir
   OBJECT_FILE_DIR = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir
-  TARGET_COMPILE_PDB = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/__idf_micro-ecc.pdb
-  TARGET_PDB = esp-idf/micro-ecc/libmicro-ecc.pdb
 
 
 # =============================================================================
@@ -1321,9 +1182,8 @@ build esp-idf/micro-ecc/libmicro-ecc.a: C_STATIC_LIBRARY_LINKER____idf_micro-ecc
   OBJECT_DIR = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/__idf_micro-ecc.pdb
   TARGET_FILE = esp-idf/micro-ecc/libmicro-ecc.a
-  TARGET_PDB = esp-idf/micro-ecc/libmicro-ecc.pdb
+  TARGET_PDB = micro-ecc.a.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1368,8 +1228,6 @@ build esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp32/spi_flash_rom_patch
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/spi_flash/private_include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
   OBJECT_FILE_DIR = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp32
-  TARGET_COMPILE_PDB = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/__idf_spi_flash.pdb
-  TARGET_PDB = esp-idf/spi_flash/libspi_flash.pdb
 
 
 # =============================================================================
@@ -1384,9 +1242,8 @@ build esp-idf/spi_flash/libspi_flash.a: C_STATIC_LIBRARY_LINKER____idf_spi_flash
   OBJECT_DIR = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/__idf_spi_flash.pdb
   TARGET_FILE = esp-idf/spi_flash/libspi_flash.a
-  TARGET_PDB = esp-idf/spi_flash/libspi_flash.pdb
+  TARGET_PDB = spi_flash.a.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1455,8 +1312,6 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_table.c.obj: C_CO
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include -I/Users/jono/esp/esp-idf/components/efuse/private_include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32
-  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
-  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_api.c.obj: C_COMPILER____idf_efuse_ /Users/jono/esp/esp-idf/components/efuse/src/esp32/esp_efuse_api.c || cmake_object_order_depends_target___idf_efuse_
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_api.c.obj.d
@@ -1464,8 +1319,6 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_api.c.obj: C_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include -I/Users/jono/esp/esp-idf/components/efuse/private_include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
-  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_fields.c.obj: C_COMPILER____idf_efuse_ /Users/jono/esp/esp-idf/components/efuse/src/esp32/esp_efuse_fields.c || cmake_object_order_depends_target___idf_efuse_
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_fields.c.obj.d
@@ -1473,8 +1326,6 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_fields.c.obj:
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include -I/Users/jono/esp/esp-idf/components/efuse/private_include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
-  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_utility.c.obj: C_COMPILER____idf_efuse_ /Users/jono/esp/esp-idf/components/efuse/src/esp32/esp_efuse_utility.c || cmake_object_order_depends_target___idf_efuse_
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_utility.c.obj.d
@@ -1482,8 +1333,6 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32/esp_efuse_utility.c.obj
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include -I/Users/jono/esp/esp-idf/components/efuse/private_include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
-  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj: C_COMPILER____idf_efuse_ /Users/jono/esp/esp-idf/components/efuse/src/esp_efuse_api.c || cmake_object_order_depends_target___idf_efuse_
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj.d
@@ -1491,8 +1340,6 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include -I/Users/jono/esp/esp-idf/components/efuse/private_include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src
-  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
-  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj: C_COMPILER____idf_efuse_ /Users/jono/esp/esp-idf/components/efuse/src/esp_efuse_fields.c || cmake_object_order_depends_target___idf_efuse_
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj.d
@@ -1500,8 +1347,6 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj: C_COM
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include -I/Users/jono/esp/esp-idf/components/efuse/private_include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src
-  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
-  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj: C_COMPILER____idf_efuse_ /Users/jono/esp/esp-idf/components/efuse/src/esp_efuse_utility.c || cmake_object_order_depends_target___idf_efuse_
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj.d
@@ -1509,8 +1354,6 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj: C_CO
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include -I/Users/jono/esp/esp-idf/components/efuse/private_include -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src
-  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
-  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 
 # =============================================================================
@@ -1525,9 +1368,8 @@ build esp-idf/efuse/libefuse.a: C_STATIC_LIBRARY_LINKER____idf_efuse_ esp-idf/ef
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
   TARGET_FILE = esp-idf/efuse/libefuse.a
-  TARGET_PDB = esp-idf/efuse/libefuse.pdb
+  TARGET_PDB = efuse.a.dbg
 
 
 #############################################
@@ -1593,8 +1435,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_common.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj.d
@@ -1602,8 +1442,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_flash.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj.d
@@ -1611,8 +1449,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_mem.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj.d
@@ -1620,8 +1456,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_random.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj.d
@@ -1629,8 +1463,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj.d
@@ -1638,8 +1470,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/esp_image_format.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj.d
@@ -1647,8 +1477,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/flash_encrypt.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj.d
@@ -1656,8 +1484,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/fla
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/flash_partitions.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj.d
@@ -1665,8 +1491,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/fla
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/flash_qio_mode.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj.d
@@ -1674,8 +1498,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/fla
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config_esp32.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_flash_config_esp32.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config_esp32.c.obj.d
@@ -1683,8 +1505,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_efuse_esp32.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32.c.obj.d
@@ -1692,8 +1512,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_init.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj.d
@@ -1701,8 +1519,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_console.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj.d
@@ -1710,8 +1526,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/bootloader_console_loader.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj.d
@@ -1719,8 +1533,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_sha.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_sha.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_sha.c.obj.d
@@ -1728,8 +1540,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/flash_encrypt.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/esp32/flash_encrypt.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/flash_encrypt.c.obj.d
@@ -1737,8 +1547,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_esp32.c.obj: C_COMPILER____idf_bootloader_support_ /Users/jono/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_esp32.c || cmake_object_order_depends_target___idf_bootloader_support_
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_esp32.c.obj.d
@@ -1746,8 +1554,6 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc -I/Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/Users/jono/esp/esp-idf/components/spi_flash/include -I/Users/jono/esp/esp-idf/components/efuse/include -I/Users/jono/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 
 # =============================================================================
@@ -1762,9 +1568,8 @@ build esp-idf/bootloader_support/libbootloader_support.a: C_STATIC_LIBRARY_LINKE
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
   TARGET_FILE = esp-idf/bootloader_support/libbootloader_support.a
-  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
+  TARGET_PDB = bootloader_support.a.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1837,8 +1642,6 @@ build esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj: C_COMPILER_
   INCLUDES = -Iconfig -I/Users/jono/esp/esp-idf/components/log/include -I/Users/jono/esp/esp-idf/components/esp_rom/include -I/Users/jono/esp/esp-idf/components/esp_common/include -I/Users/jono/esp/esp-idf/components/xtensa/include -I/Users/jono/esp/esp-idf/components/xtensa/esp32/include -I/Users/jono/esp/esp-idf/components/esp32/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include -I/Users/jono/esp/esp-idf/components/bootloader_support/include_bootloader -I/Users/jono/esp/esp-idf/components/soc/src/esp32/. -I/Users/jono/esp/esp-idf/components/soc/src/esp32/include -I/Users/jono/esp/esp-idf/components/soc/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/. -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/include -I/Users/jono/esp/esp-idf/components/soc/soc/esp32/../include
   OBJECT_DIR = esp-idf/main/CMakeFiles/__idf_main.dir
   OBJECT_FILE_DIR = esp-idf/main/CMakeFiles/__idf_main.dir
-  TARGET_COMPILE_PDB = esp-idf/main/CMakeFiles/__idf_main.dir/__idf_main.pdb
-  TARGET_PDB = esp-idf/main/libmain.pdb
 
 
 # =============================================================================
@@ -1853,9 +1656,8 @@ build esp-idf/main/libmain.a: C_STATIC_LIBRARY_LINKER____idf_main_ esp-idf/main/
   OBJECT_DIR = esp-idf/main/CMakeFiles/__idf_main.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = esp-idf/main/CMakeFiles/__idf_main.dir/__idf_main.pdb
   TARGET_FILE = esp-idf/main/libmain.a
-  TARGET_PDB = esp-idf/main/libmain.pdb
+  TARGET_PDB = main.a.dbg
 
 # =============================================================================
 # Target aliases.
@@ -2047,14 +1849,14 @@ build esp-idf/xtensa/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/jono/Desktop/internal_communication/sdkconfig /Users/jono/esp/esp-idf/.git/HEAD /Users/jono/esp/esp-idf/.git/modules/components/asio/asio/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bt/controller/lib/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bt/host/nimble/nimble/HEAD /Users/jono/esp/esp-idf/.git/modules/components/cbor/tinycbor/HEAD /Users/jono/esp/esp-idf/.git/modules/components/coap/libcoap/HEAD /Users/jono/esp/esp-idf/.git/modules/components/esp_wifi/lib/HEAD /Users/jono/esp/esp-idf/.git/modules/components/esptool_py/esptool/HEAD /Users/jono/esp/esp-idf/.git/modules/components/expat/expat/HEAD /Users/jono/esp/esp-idf/.git/modules/components/json/cJSON/HEAD /Users/jono/esp/esp-idf/.git/modules/components/libsodium/libsodium/HEAD /Users/jono/esp/esp-idf/.git/modules/components/lwip/lwip/HEAD /Users/jono/esp/esp-idf/.git/modules/components/mbedtls/mbedtls/HEAD /Users/jono/esp/esp-idf/.git/modules/components/mqtt/esp-mqtt/HEAD /Users/jono/esp/esp-idf/.git/modules/components/nghttp/nghttp2/HEAD /Users/jono/esp/esp-idf/.git/modules/components/protobuf-c/protobuf-c/HEAD /Users/jono/esp/esp-idf/.git/modules/components/spiffs/spiffs/HEAD /Users/jono/esp/esp-idf/.git/modules/components/tinyusb/tinyusb/HEAD /Users/jono/esp/esp-idf/.git/modules/components/unity/unity/HEAD /Users/jono/esp/esp-idf/.git/modules/examples/build_system/cmake/import_lib/main/lib/tinyxml2/HEAD /Users/jono/esp/esp-idf/.git/modules/examples/peripherals/secure_element/atecc608_ecdsa/components/esp-cryptoauthlib/HEAD /Users/jono/esp/esp-idf/.git/refs/heads/master /Users/jono/esp/esp-idf/CMakeLists.txt /Users/jono/esp/esp-idf/components/asio/asio/.git /Users/jono/esp/esp-idf/components/bootloader/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/project_include.cmake /Users/jono/esp/esp-idf/components/bootloader/subproject/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/.git /Users/jono/esp/esp-idf/components/bootloader/subproject/main/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader_support/CMakeLists.txt /Users/jono/esp/esp-idf/components/bt/controller/lib/.git /Users/jono/esp/esp-idf/components/bt/host/nimble/nimble/.git /Users/jono/esp/esp-idf/components/cbor/tinycbor/.git /Users/jono/esp/esp-idf/components/coap/libcoap/.git /Users/jono/esp/esp-idf/components/efuse/CMakeLists.txt /Users/jono/esp/esp-idf/components/efuse/esp32/sources.cmake /Users/jono/esp/esp-idf/components/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp32/project_include.cmake /Users/jono/esp/esp-idf/components/esp_common/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp_rom/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp_wifi/lib/.git /Users/jono/esp/esp-idf/components/esptool_py/CMakeLists.txt /Users/jono/esp/esp-idf/components/esptool_py/esptool/.git /Users/jono/esp/esp-idf/components/esptool_py/project_include.cmake /Users/jono/esp/esp-idf/components/expat/expat/.git /Users/jono/esp/esp-idf/components/json/cJSON/.git /Users/jono/esp/esp-idf/components/libsodium/libsodium/.git /Users/jono/esp/esp-idf/components/log/CMakeLists.txt /Users/jono/esp/esp-idf/components/lwip/lwip/.git /Users/jono/esp/esp-idf/components/mbedtls/mbedtls/.git /Users/jono/esp/esp-idf/components/mqtt/esp-mqtt/.git /Users/jono/esp/esp-idf/components/nghttp/nghttp2/.git /Users/jono/esp/esp-idf/components/partition_table/CMakeLists.txt /Users/jono/esp/esp-idf/components/partition_table/project_include.cmake /Users/jono/esp/esp-idf/components/protobuf-c/protobuf-c/.git /Users/jono/esp/esp-idf/components/soc/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/soc/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/soc/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/src/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/spi_flash/CMakeLists.txt /Users/jono/esp/esp-idf/components/spiffs/spiffs/.git /Users/jono/esp/esp-idf/components/tinyusb/tinyusb/.git /Users/jono/esp/esp-idf/components/unity/unity/.git /Users/jono/esp/esp-idf/components/xtensa/CMakeLists.txt /Users/jono/esp/esp-idf/examples/build_system/cmake/import_lib/main/lib/tinyxml2/.git /Users/jono/esp/esp-idf/examples/peripherals/secure_element/atecc608_ecdsa/components/esp-cryptoauthlib/.git /Users/jono/esp/esp-idf/tools/cmake/build.cmake /Users/jono/esp/esp-idf/tools/cmake/component.cmake /Users/jono/esp/esp-idf/tools/cmake/crosstool_version_check.cmake /Users/jono/esp/esp-idf/tools/cmake/dfu.cmake /Users/jono/esp/esp-idf/tools/cmake/git_submodules.cmake /Users/jono/esp/esp-idf/tools/cmake/idf.cmake /Users/jono/esp/esp-idf/tools/cmake/kconfig.cmake /Users/jono/esp/esp-idf/tools/cmake/ldgen.cmake /Users/jono/esp/esp-idf/tools/cmake/project.cmake /Users/jono/esp/esp-idf/tools/cmake/project_description.json.in /Users/jono/esp/esp-idf/tools/cmake/targets.cmake /Users/jono/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake /Users/jono/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake.in /Users/jono/esp/esp-idf/tools/cmake/toolchain-esp32.cmake /Users/jono/esp/esp-idf/tools/cmake/utilities.cmake /Users/jono/esp/esp-idf/tools/cmake/version.cmake /Users/jono/esp/esp-idf/tools/kconfig_new/confgen.py /Users/jono/esp/esp-idf/tools/kconfig_new/config.env.in /Users/jono/esp/esp-idf/tools/kconfig_new/kconfiglib.py /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeASMCompiler.cmake.in /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeASMInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCCompilerABI.c /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineASMCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystem.cmake.in /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeTestASMCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-ASM.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-C.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/ExternalProject.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindGit.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.17.0/CMakeASMCompiler.cmake CMakeFiles/3.17.0/CMakeCCompiler.cmake CMakeFiles/3.17.0/CMakeCXXCompiler.cmake CMakeFiles/3.17.0/CMakeSystem.cmake CMakeFiles/git-data/grabRef.cmake config/sdkconfig.cmake config/sdkconfig.h
+build build.ninja: RERUN_CMAKE | /Users/jono/Desktop/internal_communication/sdkconfig /Users/jono/esp/esp-idf/.git/HEAD /Users/jono/esp/esp-idf/.git/modules/components/asio/asio/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bt/controller/lib/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bt/host/nimble/nimble/HEAD /Users/jono/esp/esp-idf/.git/modules/components/cbor/tinycbor/HEAD /Users/jono/esp/esp-idf/.git/modules/components/coap/libcoap/HEAD /Users/jono/esp/esp-idf/.git/modules/components/esp_wifi/lib/HEAD /Users/jono/esp/esp-idf/.git/modules/components/esptool_py/esptool/HEAD /Users/jono/esp/esp-idf/.git/modules/components/expat/expat/HEAD /Users/jono/esp/esp-idf/.git/modules/components/json/cJSON/HEAD /Users/jono/esp/esp-idf/.git/modules/components/libsodium/libsodium/HEAD /Users/jono/esp/esp-idf/.git/modules/components/lwip/lwip/HEAD /Users/jono/esp/esp-idf/.git/modules/components/mbedtls/mbedtls/HEAD /Users/jono/esp/esp-idf/.git/modules/components/mqtt/esp-mqtt/HEAD /Users/jono/esp/esp-idf/.git/modules/components/nghttp/nghttp2/HEAD /Users/jono/esp/esp-idf/.git/modules/components/protobuf-c/protobuf-c/HEAD /Users/jono/esp/esp-idf/.git/modules/components/spiffs/spiffs/HEAD /Users/jono/esp/esp-idf/.git/modules/components/tinyusb/tinyusb/HEAD /Users/jono/esp/esp-idf/.git/modules/components/unity/unity/HEAD /Users/jono/esp/esp-idf/.git/modules/examples/build_system/cmake/import_lib/main/lib/tinyxml2/HEAD /Users/jono/esp/esp-idf/.git/modules/examples/peripherals/secure_element/atecc608_ecdsa/components/esp-cryptoauthlib/HEAD /Users/jono/esp/esp-idf/.git/refs/heads/master /Users/jono/esp/esp-idf/CMakeLists.txt /Users/jono/esp/esp-idf/components/asio/asio/.git /Users/jono/esp/esp-idf/components/bootloader/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/project_include.cmake /Users/jono/esp/esp-idf/components/bootloader/subproject/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/.git /Users/jono/esp/esp-idf/components/bootloader/subproject/main/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader_support/CMakeLists.txt /Users/jono/esp/esp-idf/components/bt/controller/lib/.git /Users/jono/esp/esp-idf/components/bt/host/nimble/nimble/.git /Users/jono/esp/esp-idf/components/cbor/tinycbor/.git /Users/jono/esp/esp-idf/components/coap/libcoap/.git /Users/jono/esp/esp-idf/components/efuse/CMakeLists.txt /Users/jono/esp/esp-idf/components/efuse/esp32/sources.cmake /Users/jono/esp/esp-idf/components/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp32/project_include.cmake /Users/jono/esp/esp-idf/components/esp_common/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp_rom/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp_wifi/lib/.git /Users/jono/esp/esp-idf/components/esptool_py/CMakeLists.txt /Users/jono/esp/esp-idf/components/esptool_py/esptool/.git /Users/jono/esp/esp-idf/components/esptool_py/project_include.cmake /Users/jono/esp/esp-idf/components/expat/expat/.git /Users/jono/esp/esp-idf/components/json/cJSON/.git /Users/jono/esp/esp-idf/components/libsodium/libsodium/.git /Users/jono/esp/esp-idf/components/log/CMakeLists.txt /Users/jono/esp/esp-idf/components/lwip/lwip/.git /Users/jono/esp/esp-idf/components/mbedtls/mbedtls/.git /Users/jono/esp/esp-idf/components/mqtt/esp-mqtt/.git /Users/jono/esp/esp-idf/components/nghttp/nghttp2/.git /Users/jono/esp/esp-idf/components/partition_table/CMakeLists.txt /Users/jono/esp/esp-idf/components/partition_table/project_include.cmake /Users/jono/esp/esp-idf/components/protobuf-c/protobuf-c/.git /Users/jono/esp/esp-idf/components/soc/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/soc/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/soc/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/src/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/spi_flash/CMakeLists.txt /Users/jono/esp/esp-idf/components/spiffs/spiffs/.git /Users/jono/esp/esp-idf/components/tinyusb/tinyusb/.git /Users/jono/esp/esp-idf/components/unity/unity/.git /Users/jono/esp/esp-idf/components/xtensa/CMakeLists.txt /Users/jono/esp/esp-idf/examples/build_system/cmake/import_lib/main/lib/tinyxml2/.git /Users/jono/esp/esp-idf/examples/peripherals/secure_element/atecc608_ecdsa/components/esp-cryptoauthlib/.git /Users/jono/esp/esp-idf/tools/cmake/build.cmake /Users/jono/esp/esp-idf/tools/cmake/component.cmake /Users/jono/esp/esp-idf/tools/cmake/crosstool_version_check.cmake /Users/jono/esp/esp-idf/tools/cmake/dfu.cmake /Users/jono/esp/esp-idf/tools/cmake/git_submodules.cmake /Users/jono/esp/esp-idf/tools/cmake/idf.cmake /Users/jono/esp/esp-idf/tools/cmake/kconfig.cmake /Users/jono/esp/esp-idf/tools/cmake/ldgen.cmake /Users/jono/esp/esp-idf/tools/cmake/project.cmake /Users/jono/esp/esp-idf/tools/cmake/project_description.json.in /Users/jono/esp/esp-idf/tools/cmake/targets.cmake /Users/jono/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake /Users/jono/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake.in /Users/jono/esp/esp-idf/tools/cmake/toolchain-esp32.cmake /Users/jono/esp/esp-idf/tools/cmake/utilities.cmake /Users/jono/esp/esp-idf/tools/cmake/version.cmake /Users/jono/esp/esp-idf/tools/kconfig_new/confgen.py /Users/jono/esp/esp-idf/tools/kconfig_new/config.env.in /Users/jono/esp/esp-idf/tools/kconfig_new/kconfiglib.py /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeASMInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-ASM.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-C.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/ExternalProject.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindGit.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.17.0/CMakeASMCompiler.cmake CMakeFiles/3.17.0/CMakeCCompiler.cmake CMakeFiles/3.17.0/CMakeCXXCompiler.cmake CMakeFiles/3.17.0/CMakeSystem.cmake CMakeFiles/git-data/grabRef.cmake config/sdkconfig.cmake config/sdkconfig.h
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/jono/Desktop/internal_communication/sdkconfig /Users/jono/esp/esp-idf/.git/HEAD /Users/jono/esp/esp-idf/.git/modules/components/asio/asio/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bt/controller/lib/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bt/host/nimble/nimble/HEAD /Users/jono/esp/esp-idf/.git/modules/components/cbor/tinycbor/HEAD /Users/jono/esp/esp-idf/.git/modules/components/coap/libcoap/HEAD /Users/jono/esp/esp-idf/.git/modules/components/esp_wifi/lib/HEAD /Users/jono/esp/esp-idf/.git/modules/components/esptool_py/esptool/HEAD /Users/jono/esp/esp-idf/.git/modules/components/expat/expat/HEAD /Users/jono/esp/esp-idf/.git/modules/components/json/cJSON/HEAD /Users/jono/esp/esp-idf/.git/modules/components/libsodium/libsodium/HEAD /Users/jono/esp/esp-idf/.git/modules/components/lwip/lwip/HEAD /Users/jono/esp/esp-idf/.git/modules/components/mbedtls/mbedtls/HEAD /Users/jono/esp/esp-idf/.git/modules/components/mqtt/esp-mqtt/HEAD /Users/jono/esp/esp-idf/.git/modules/components/nghttp/nghttp2/HEAD /Users/jono/esp/esp-idf/.git/modules/components/protobuf-c/protobuf-c/HEAD /Users/jono/esp/esp-idf/.git/modules/components/spiffs/spiffs/HEAD /Users/jono/esp/esp-idf/.git/modules/components/tinyusb/tinyusb/HEAD /Users/jono/esp/esp-idf/.git/modules/components/unity/unity/HEAD /Users/jono/esp/esp-idf/.git/modules/examples/build_system/cmake/import_lib/main/lib/tinyxml2/HEAD /Users/jono/esp/esp-idf/.git/modules/examples/peripherals/secure_element/atecc608_ecdsa/components/esp-cryptoauthlib/HEAD /Users/jono/esp/esp-idf/.git/refs/heads/master /Users/jono/esp/esp-idf/CMakeLists.txt /Users/jono/esp/esp-idf/components/asio/asio/.git /Users/jono/esp/esp-idf/components/bootloader/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/project_include.cmake /Users/jono/esp/esp-idf/components/bootloader/subproject/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/.git /Users/jono/esp/esp-idf/components/bootloader/subproject/main/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader_support/CMakeLists.txt /Users/jono/esp/esp-idf/components/bt/controller/lib/.git /Users/jono/esp/esp-idf/components/bt/host/nimble/nimble/.git /Users/jono/esp/esp-idf/components/cbor/tinycbor/.git /Users/jono/esp/esp-idf/components/coap/libcoap/.git /Users/jono/esp/esp-idf/components/efuse/CMakeLists.txt /Users/jono/esp/esp-idf/components/efuse/esp32/sources.cmake /Users/jono/esp/esp-idf/components/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp32/project_include.cmake /Users/jono/esp/esp-idf/components/esp_common/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp_rom/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp_wifi/lib/.git /Users/jono/esp/esp-idf/components/esptool_py/CMakeLists.txt /Users/jono/esp/esp-idf/components/esptool_py/esptool/.git /Users/jono/esp/esp-idf/components/esptool_py/project_include.cmake /Users/jono/esp/esp-idf/components/expat/expat/.git /Users/jono/esp/esp-idf/components/json/cJSON/.git /Users/jono/esp/esp-idf/components/libsodium/libsodium/.git /Users/jono/esp/esp-idf/components/log/CMakeLists.txt /Users/jono/esp/esp-idf/components/lwip/lwip/.git /Users/jono/esp/esp-idf/components/mbedtls/mbedtls/.git /Users/jono/esp/esp-idf/components/mqtt/esp-mqtt/.git /Users/jono/esp/esp-idf/components/nghttp/nghttp2/.git /Users/jono/esp/esp-idf/components/partition_table/CMakeLists.txt /Users/jono/esp/esp-idf/components/partition_table/project_include.cmake /Users/jono/esp/esp-idf/components/protobuf-c/protobuf-c/.git /Users/jono/esp/esp-idf/components/soc/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/soc/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/soc/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/src/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/spi_flash/CMakeLists.txt /Users/jono/esp/esp-idf/components/spiffs/spiffs/.git /Users/jono/esp/esp-idf/components/tinyusb/tinyusb/.git /Users/jono/esp/esp-idf/components/unity/unity/.git /Users/jono/esp/esp-idf/components/xtensa/CMakeLists.txt /Users/jono/esp/esp-idf/examples/build_system/cmake/import_lib/main/lib/tinyxml2/.git /Users/jono/esp/esp-idf/examples/peripherals/secure_element/atecc608_ecdsa/components/esp-cryptoauthlib/.git /Users/jono/esp/esp-idf/tools/cmake/build.cmake /Users/jono/esp/esp-idf/tools/cmake/component.cmake /Users/jono/esp/esp-idf/tools/cmake/crosstool_version_check.cmake /Users/jono/esp/esp-idf/tools/cmake/dfu.cmake /Users/jono/esp/esp-idf/tools/cmake/git_submodules.cmake /Users/jono/esp/esp-idf/tools/cmake/idf.cmake /Users/jono/esp/esp-idf/tools/cmake/kconfig.cmake /Users/jono/esp/esp-idf/tools/cmake/ldgen.cmake /Users/jono/esp/esp-idf/tools/cmake/project.cmake /Users/jono/esp/esp-idf/tools/cmake/project_description.json.in /Users/jono/esp/esp-idf/tools/cmake/targets.cmake /Users/jono/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake /Users/jono/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake.in /Users/jono/esp/esp-idf/tools/cmake/toolchain-esp32.cmake /Users/jono/esp/esp-idf/tools/cmake/utilities.cmake /Users/jono/esp/esp-idf/tools/cmake/version.cmake /Users/jono/esp/esp-idf/tools/kconfig_new/confgen.py /Users/jono/esp/esp-idf/tools/kconfig_new/config.env.in /Users/jono/esp/esp-idf/tools/kconfig_new/kconfiglib.py /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeASMCompiler.cmake.in /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeASMInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCCompilerABI.c /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineASMCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystem.cmake.in /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeTestASMCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-ASM.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-C.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/ExternalProject.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindGit.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.17.0/CMakeASMCompiler.cmake CMakeFiles/3.17.0/CMakeCCompiler.cmake CMakeFiles/3.17.0/CMakeCXXCompiler.cmake CMakeFiles/3.17.0/CMakeSystem.cmake CMakeFiles/git-data/grabRef.cmake config/sdkconfig.cmake config/sdkconfig.h: phony
+build /Users/jono/Desktop/internal_communication/sdkconfig /Users/jono/esp/esp-idf/.git/HEAD /Users/jono/esp/esp-idf/.git/modules/components/asio/asio/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bt/controller/lib/HEAD /Users/jono/esp/esp-idf/.git/modules/components/bt/host/nimble/nimble/HEAD /Users/jono/esp/esp-idf/.git/modules/components/cbor/tinycbor/HEAD /Users/jono/esp/esp-idf/.git/modules/components/coap/libcoap/HEAD /Users/jono/esp/esp-idf/.git/modules/components/esp_wifi/lib/HEAD /Users/jono/esp/esp-idf/.git/modules/components/esptool_py/esptool/HEAD /Users/jono/esp/esp-idf/.git/modules/components/expat/expat/HEAD /Users/jono/esp/esp-idf/.git/modules/components/json/cJSON/HEAD /Users/jono/esp/esp-idf/.git/modules/components/libsodium/libsodium/HEAD /Users/jono/esp/esp-idf/.git/modules/components/lwip/lwip/HEAD /Users/jono/esp/esp-idf/.git/modules/components/mbedtls/mbedtls/HEAD /Users/jono/esp/esp-idf/.git/modules/components/mqtt/esp-mqtt/HEAD /Users/jono/esp/esp-idf/.git/modules/components/nghttp/nghttp2/HEAD /Users/jono/esp/esp-idf/.git/modules/components/protobuf-c/protobuf-c/HEAD /Users/jono/esp/esp-idf/.git/modules/components/spiffs/spiffs/HEAD /Users/jono/esp/esp-idf/.git/modules/components/tinyusb/tinyusb/HEAD /Users/jono/esp/esp-idf/.git/modules/components/unity/unity/HEAD /Users/jono/esp/esp-idf/.git/modules/examples/build_system/cmake/import_lib/main/lib/tinyxml2/HEAD /Users/jono/esp/esp-idf/.git/modules/examples/peripherals/secure_element/atecc608_ecdsa/components/esp-cryptoauthlib/HEAD /Users/jono/esp/esp-idf/.git/refs/heads/master /Users/jono/esp/esp-idf/CMakeLists.txt /Users/jono/esp/esp-idf/components/asio/asio/.git /Users/jono/esp/esp-idf/components/bootloader/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/project_include.cmake /Users/jono/esp/esp-idf/components/bootloader/subproject/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/.git /Users/jono/esp/esp-idf/components/bootloader/subproject/main/CMakeLists.txt /Users/jono/esp/esp-idf/components/bootloader_support/CMakeLists.txt /Users/jono/esp/esp-idf/components/bt/controller/lib/.git /Users/jono/esp/esp-idf/components/bt/host/nimble/nimble/.git /Users/jono/esp/esp-idf/components/cbor/tinycbor/.git /Users/jono/esp/esp-idf/components/coap/libcoap/.git /Users/jono/esp/esp-idf/components/efuse/CMakeLists.txt /Users/jono/esp/esp-idf/components/efuse/esp32/sources.cmake /Users/jono/esp/esp-idf/components/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp32/project_include.cmake /Users/jono/esp/esp-idf/components/esp_common/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp_rom/CMakeLists.txt /Users/jono/esp/esp-idf/components/esp_wifi/lib/.git /Users/jono/esp/esp-idf/components/esptool_py/CMakeLists.txt /Users/jono/esp/esp-idf/components/esptool_py/esptool/.git /Users/jono/esp/esp-idf/components/esptool_py/project_include.cmake /Users/jono/esp/esp-idf/components/expat/expat/.git /Users/jono/esp/esp-idf/components/json/cJSON/.git /Users/jono/esp/esp-idf/components/libsodium/libsodium/.git /Users/jono/esp/esp-idf/components/log/CMakeLists.txt /Users/jono/esp/esp-idf/components/lwip/lwip/.git /Users/jono/esp/esp-idf/components/mbedtls/mbedtls/.git /Users/jono/esp/esp-idf/components/mqtt/esp-mqtt/.git /Users/jono/esp/esp-idf/components/nghttp/nghttp2/.git /Users/jono/esp/esp-idf/components/partition_table/CMakeLists.txt /Users/jono/esp/esp-idf/components/partition_table/project_include.cmake /Users/jono/esp/esp-idf/components/protobuf-c/protobuf-c/.git /Users/jono/esp/esp-idf/components/soc/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/soc/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/soc/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/soc/src/esp32/CMakeLists.txt /Users/jono/esp/esp-idf/components/spi_flash/CMakeLists.txt /Users/jono/esp/esp-idf/components/spiffs/spiffs/.git /Users/jono/esp/esp-idf/components/tinyusb/tinyusb/.git /Users/jono/esp/esp-idf/components/unity/unity/.git /Users/jono/esp/esp-idf/components/xtensa/CMakeLists.txt /Users/jono/esp/esp-idf/examples/build_system/cmake/import_lib/main/lib/tinyxml2/.git /Users/jono/esp/esp-idf/examples/peripherals/secure_element/atecc608_ecdsa/components/esp-cryptoauthlib/.git /Users/jono/esp/esp-idf/tools/cmake/build.cmake /Users/jono/esp/esp-idf/tools/cmake/component.cmake /Users/jono/esp/esp-idf/tools/cmake/crosstool_version_check.cmake /Users/jono/esp/esp-idf/tools/cmake/dfu.cmake /Users/jono/esp/esp-idf/tools/cmake/git_submodules.cmake /Users/jono/esp/esp-idf/tools/cmake/idf.cmake /Users/jono/esp/esp-idf/tools/cmake/kconfig.cmake /Users/jono/esp/esp-idf/tools/cmake/ldgen.cmake /Users/jono/esp/esp-idf/tools/cmake/project.cmake /Users/jono/esp/esp-idf/tools/cmake/project_description.json.in /Users/jono/esp/esp-idf/tools/cmake/targets.cmake /Users/jono/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake /Users/jono/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake.in /Users/jono/esp/esp-idf/tools/cmake/toolchain-esp32.cmake /Users/jono/esp/esp-idf/tools/cmake/utilities.cmake /Users/jono/esp/esp-idf/tools/cmake/version.cmake /Users/jono/esp/esp-idf/tools/kconfig_new/confgen.py /Users/jono/esp/esp-idf/tools/kconfig_new/config.env.in /Users/jono/esp/esp-idf/tools/kconfig_new/kconfiglib.py /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeASMInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-ASM.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-C.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/ExternalProject.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindGit.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/local/Cellar/cmake/3.17.0_1/share/cmake/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.17.0/CMakeASMCompiler.cmake CMakeFiles/3.17.0/CMakeCCompiler.cmake CMakeFiles/3.17.0/CMakeCXXCompiler.cmake CMakeFiles/3.17.0/CMakeSystem.cmake CMakeFiles/git-data/grabRef.cmake config/sdkconfig.cmake config/sdkconfig.h: phony
 
 
 #############################################

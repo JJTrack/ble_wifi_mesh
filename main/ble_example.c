@@ -15,7 +15,7 @@ void add_val_to_queue(void * params)
     long ok;
 
     ble_data_for_queue_t stuff = *(ble_data_for_queue_t *) params;
-    ok = xQueueSend(ble_data_queue, &stuff, 1000 / portTICK_PERIOD_MS);
+    ok = xQueueSend(ble_data_queue, &stuff, 500 / portTICK_PERIOD_MS);
 
     if(ok) {
         ESP_LOGI("QUEUE", "ADDED DATA TO QUEUE");
@@ -65,7 +65,7 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg)
 void ble_app_scan(void)
 {
     struct ble_gap_disc_params ble_gap_disc_params;
-    ble_gap_disc_params.filter_duplicates = 1;
+    ble_gap_disc_params.filter_duplicates = 0;
     ble_gap_disc_params.passive = 1;
     ble_gap_disc_params.itvl = 0;
     ble_gap_disc_params.window = 0;
