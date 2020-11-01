@@ -1,8 +1,17 @@
-# ESP32 Starter template
+# Wi-Fi Mesh Network Repository
 
 ## Quick overview
 
-This repository contains the code for the Wi-Fi Mesh Network. This network communicates with the TCP Server
+This repository contains the Wi-Fi Mesh Network code. This Mesh Network is self healing and repairing; it connects to the TCP Server to send data packets. 
+
+## Set Up Steps
+1. Open the menuconfig using
+```bash
+idf.py -p [your com port] menuconfig
+```
+2. Navigate to TCP Configuration using the arrow keys; set the IP and the Port for the TCP server
+3. In the menuconfig, navigate to Example Connection Configuration; set up the Wi-Fi SSID and the Wi-Fi Password
+4. Flash the ESP32 using the flashing instructions below
 
 ## prerequisites
 
